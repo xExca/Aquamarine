@@ -1,25 +1,23 @@
 import { GoPerson } from "react-icons/go"
 import Navbar from "./Components/Navbar/Navbar"
+import Landing from "./Components/Home/Landing"
+import BestSellers from "./Components/Home/BestSellers"
+import Collections from "./Components/Home/Collections"
+import ProductImage from "./Components/Shared/ProductImage"
+import ImageGallery from "./Components/Home/ImageGallery"
+import Discover from "./Components/Home/Discover"
+import Footer from "./Components/Home/Footer"
 
 const App = () => {
   return (
     <>
       <Navbar />
-      <div className="relative w-full" style={{ height: "calc(100vh - 80px)" }} // adjust 80px to your Navbar height
-      >
-        <img
-          src="https://placehold.co/1920x1080"
-          alt="home"
-          className="w-full h-full object-cover"
-        />
-
-        {/* Overlay Content */}
-        <div className="absolute top-4 left-8">
-          <button className="bg-stone-600 text-white p-3 hover:bg-stone-800 transition inline-flex items-center">
-            <GoPerson /> &nbsp; Shop Now &gt;
-          </button>
-        </div>
-      </div>
+      <Landing />
+      <BestSellers/>
+      <Collections />
+      <ImageGallery isBestSellers={false}/>
+      <Discover />
+      <Footer />
     </>
   )
 }
