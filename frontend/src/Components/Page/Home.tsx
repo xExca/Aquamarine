@@ -1,8 +1,11 @@
-import HomeFull from "../Shared/HomeFull"
-import ImageGallery from "./ImageGallery"
+import BestSellers from "../Home/BestSellers";
+import Collections from "../Home/Collections";
+import Discover from "../Home/Discover";
+import Hero from "../Home/Hero";
+import ImageGallery from "../Home/ImageGallery";
 
 const images = [
-  { 
+  {
     'id': 1,
     'productName': 'Sunset Orchid Bikini Set',
     'price': 1299,
@@ -28,11 +31,16 @@ const images = [
   }
 ];
 
-const BestSellers = () => {
+const Home = () => {
   return (
-    <HomeFull title="Best Sellers" message="Our most-loved swimsuits — flattering, comfortable, and made to move with you. Perfect for sun, sea, and everything in between.">
-      <ImageGallery images={images} />
-    </HomeFull>
+    <>
+      <Hero />
+      <BestSellers/>
+      <Collections />
+      <ImageGallery images={images}/>
+      <Discover />
+    </>
   )
 }
-export default BestSellers
+
+export default Home

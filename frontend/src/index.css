@@ -9,3 +9,7 @@
 *::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Edge */
 }
+
+@theme {
+  --font-sans: "Poppins", sans-serif;
+}

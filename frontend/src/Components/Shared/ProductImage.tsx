@@ -1,13 +1,21 @@
 import { FaSearch } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 type Props = {
+  productId: number
   productName: string
   price: number
   url: string
   isProduct?: boolean
 }
-const ProductImage = ({productName, price, url, isProduct=false}: Props) => {
+
+const ProductImage = ({productId, productName, price, url, isProduct=false}: Props) => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate(`/product/${productId}`);
+  }
   return (
-    <div className={`relative ${isProduct ? "group" : ""} overflow-hidden rounded-lg`}>
+    <div className={`relative ${isProduct ? "group" : ""} overflow-hidden rounded-lg`} onClick={handleClick}>
       {/* Product Image */}
       <img
         src={url}
