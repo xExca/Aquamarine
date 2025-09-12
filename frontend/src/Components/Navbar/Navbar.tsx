@@ -61,7 +61,7 @@ const Navbar = () => {
 
   return (
     <div className="relative z-50">
-      <nav className="sticky top-0 z-50 bg-white shadow-xl flex justify-between items-center p-3 px-20 text-lg">
+      <nav className={`sticky top-0 z-50 bg-white flex justify-between items-center p-3 px-20 text-lg ${ !hoveredMenu ? "shadow-lg" : ""}`}>
         <div className="font-bold text-teal-800 text-xl">Aquamarine.</div>
 
         <div className="flex gap-3 font-semibold">
