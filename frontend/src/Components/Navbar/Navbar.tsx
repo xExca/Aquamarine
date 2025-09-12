@@ -2,11 +2,13 @@ import { useState, useRef } from "react"
 import { CgShoppingBag } from "react-icons/cg"
 import { GoPerson, GoPersonFill, GoHeart, GoHeartFill } from "react-icons/go"
 import { IoIosArrowDown } from "react-icons/io"
+import { useNavigate } from "react-router-dom"
 
 const Navbar = () => {
   const [hoveredMenu, setHoveredMenu] = useState<"shop" | "customer" | null>(null)
   const [onPersonHover, setOnsPersonHover] = useState(false)
   const [onHeartHover, setOnHeartHover] = useState(false)
+  const navigate = useNavigate();
 
   const hideTimeout = useRef<NodeJS.Timeout | null>(null)
 
@@ -59,11 +61,11 @@ const Navbar = () => {
 
   return (
     <div className="relative z-50">
-      <nav className="sticky top-0 z-50 bg-white shadow-xl flex justify-between p-3 px-20 text-lg">
-        <div className="font-bold text-teal-800">Aquamarine.</div>
+      <nav className={`sticky top-0 z-50 bg-white flex justify-between items-center p-3 px-20 text-lg ${ !hoveredMenu ? "shadow-lg" : ""}`}>
+        <div className="font-bold text-teal-800 text-xl">Aquamarine.</div>
 
         <div className="flex gap-3 font-semibold">
-          <div className="inline-flex gap-2 p-3 border-b-2 border-transparent hover:border-teal-900 hover:text-teal-900">
+          <div className="inline-flex gap-2 p-3 border-b-2 border-transparent hover:border-teal-900 hover:text-teal-900" onClick={() => void navigate("/")}>
             Home
           </div>
           <div

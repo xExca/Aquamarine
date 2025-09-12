@@ -1,15 +1,20 @@
 import ProductImage from "../Shared/ProductImage"
 
 type Props = {
-  isBestSellers: boolean
+  images: {
+    'id': number,
+    'productName': string,
+    'price': number,
+    'url' : string
+  }[]
 }
-const ImageGallery = ({isBestSellers}:Props) => {
+
+const ImageGallery = ({images}:Props) => {
   return (
-    <div className={`grid grid-cols-2 md:grid-cols-4 gap-2 w-full ${!isBestSellers ? "pt-10" : ""}`}>
-      <ProductImage productName="Sunset Orchid Bikini Set" price={1299} isProduct={true}/>
-      <ProductImage productName="Sunset Orchid Bikini Set" price={1299} isProduct={true}/>
-      <ProductImage productName="Sunset Orchid Bikini Set" price={1299} isProduct={true}/>
-      <ProductImage productName="Sunset Orchid Bikini Set" price={1299} isProduct={true}/>
+    <div className={`grid grid-cols-2 md:grid-cols-4 gap-2 w-full`}>
+      {images.map((image, index) => 
+        <ProductImage key={index} productId={image.id} productName={image.productName} price={image.price} url={image.url} isProduct />
+      )}
     </div>
   )
 }

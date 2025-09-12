@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "react-toastify/dist/ReactToastify.css";
 
 /* === Global scrollbar hide === */
 * {
@@ -8,4 +9,8 @@
 
 *::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Edge */
+}
+
+@theme {
+  --font-sans: "Poppins", sans-serif;
 }

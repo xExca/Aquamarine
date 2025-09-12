@@ -4,11 +4,11 @@ type Props = {
 
 const CollectionsImage = ({ src }: Props) => {
   return (
-    <div className="relative overflow-hidden rounded-lg h-full">
+    <div className="relative overflow-hidden rounded-lg h-[600px] w-[490px] pb-10">
       <img
         src={src}
         alt="collection"
-        className="w-full h-full object-cover"
+        className="w-full h-full object-cover object-fit"
       />
     </div>
   )
