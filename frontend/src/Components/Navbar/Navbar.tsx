@@ -3,11 +3,13 @@ import { CgShoppingBag } from "react-icons/cg"
 import { GoPerson, GoPersonFill, GoHeart, GoHeartFill } from "react-icons/go"
 import { IoIosArrowDown } from "react-icons/io"
 import { useNavigate } from "react-router-dom"
+import Bag from "./Bag"
 
 const Navbar = () => {
   const [hoveredMenu, setHoveredMenu] = useState<"shop" | "customer" | null>(null)
   const [onPersonHover, setOnsPersonHover] = useState(false)
   const [onHeartHover, setOnHeartHover] = useState(false)
+  const [open, setOpen] = useState(false);
   const navigate = useNavigate();
 
   const hideTimeout = useRef<NodeJS.Timeout | null>(null)
@@ -72,6 +74,7 @@ const Navbar = () => {
             className="inline-flex items-center gap-2 p-3 border-b-2 border-transparent hover:border-teal-900 hover:text-teal-900"
             onMouseEnter={() => handleMouseEnter("shop")}
             onMouseLeave={handleMouseLeave}
+            onClick={() => navigate('/shop')}
           >
             <span>Shop</span>
             <IoIosArrowDown size={20} />
@@ -80,17 +83,19 @@ const Navbar = () => {
             className="inline-flex items-center gap-2 p-3 border-b-2 border-transparent hover:border-teal-900 hover:text-teal-900"
             onMouseEnter={() => handleMouseEnter("customer")}
             onMouseLeave={handleMouseLeave}
+            onClick={() => navigate('/customer-care')}
           >
             <span>Customer Care</span>
             <IoIosArrowDown size={20} />
           </div>
-          <div className="inline-flex p-3 text-red-600">Sale</div>
+          <div className="inline-flex p-3 text-red-600" onClick={() => navigate('/sale')}>Sale</div>
         </div>
 
         <div className="flex gap-3">
           <div
             onMouseEnter={() => setOnsPersonHover(true)}
             onMouseLeave={() => setOnsPersonHover(false)}
+            onClick={() => navigate('/user-management')}
           >
             {onPersonHover ? <GoPersonFill size={30} /> : <GoPerson size={30} />}
           </div>
@@ -100,7 +105,7 @@ const Navbar = () => {
           >
             {onHeartHover ? <GoHeartFill size={30} /> : <GoHeart size={30} />}
           </div>
-          <div>
+          <div className="cursor-pointer" onClick={() => setOpen(true)}>
             <CgShoppingBag size={30} />
           </div>
         </div>
@@ -118,6 +123,7 @@ const Navbar = () => {
           {menuContent[hoveredMenu]}
         </div>
       )}
+      <Bag open={open} setOpen={setOpen} />
     </div>
   )
 }

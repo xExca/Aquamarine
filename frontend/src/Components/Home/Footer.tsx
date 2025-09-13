@@ -56,7 +56,6 @@ const Footer = () => {
             <img src="/assets/banks/amex.png" alt="amex" className="w-10 h-6 object-contain" />
             <img src="/assets/banks/paypal.png" alt="paypal" className="w-10 h-6 object-contain" />
             <img src="/assets/banks/gcash.png" alt="gcash" className="w-10 h-6 object-contain" />
-
           </div>
         </div>
       </div>

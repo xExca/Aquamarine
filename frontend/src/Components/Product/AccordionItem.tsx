@@ -4,10 +4,11 @@ import { BiChevronDown } from "react-icons/bi";
 type AccordionItemProps = {
   title: string;
   children: React.ReactNode;
+  open?: boolean;
 };
 
-const AccordionItem = ({ title, children }: AccordionItemProps) => {
-  const [isOpen, setIsOpen] = useState(false);
+const AccordionItem = ({ title, children, open = false }: AccordionItemProps) => {
+  const [isOpen, setIsOpen] = useState(open);
   const contentRef = useRef<HTMLDivElement>(null);
 
   return (
