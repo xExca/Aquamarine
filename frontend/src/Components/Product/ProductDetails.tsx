@@ -3,7 +3,7 @@ import AccordionItem from './AccordionItem'
 import Toast from '../Shared/Toast/Toast';
 import { toast } from 'react-toastify';
 import { FaCheck, FaHeart, FaRegHeart } from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
   const colors = [
     { name: "Red", value: "bg-red-500" },
     { name: "Blue", value: "bg-blue-500" },
@@ -18,7 +18,7 @@ const ProductDetails = () => {
   const [isWishlistedHovered, setIsWishlistedHovered] = useState<boolean>(false);
 
   const navigate = useNavigate();
-  
+  const params = useParams();
   const handleAddToBag = () => {
     toast(<Toast message="Added to bag successfully!" type="success" icon={<FaCheck />} />);
   };
@@ -73,7 +73,7 @@ const ProductDetails = () => {
 
           {/* Buttons */}
           <div className="flex gap-2 text-sm mb-6 flex-wrap">
-            <button className="px-2 bg-[#545333] text-white hover:bg-gray-800" onClick={() => navigate("/checkout")}>
+            <button className="px-2 bg-[#545333] text-white hover:bg-gray-800" onClick={() => navigate(`/checkout/${params.id}`)}>
               Buy Now
             </button>
             <button
