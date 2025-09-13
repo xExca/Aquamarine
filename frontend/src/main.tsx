@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import AppRoute from './Router/router.tsx'
 import { ToastContainer } from 'react-toastify'
+import { HashRouter } from 'react-router-dom'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -17,6 +18,8 @@ createRoot(document.getElementById('root')!).render(
         "bg-transparent shadow-none p-0 flex items-center mb-2"
       }
     />
-    <AppRoute />
+    <HashRouter>
+      <AppRoute />
+    </HashRouter>
   </StrictMode>
 )
