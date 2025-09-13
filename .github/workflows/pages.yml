@@ -17,32 +17,34 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+
+    # run all shell commands from the /frontend folder
+    defaults:
+      run:
+        working-directory: frontend
+
     steps:
       - uses: actions/checkout@v4
 
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: "npm"
 
-      - name: Install dependencies (use ci if lockfile exists)
-        run: |
-          if [ -f package-lock.json ]; then
-            npm ci
-          else
-            npm i
-          fi
+      - name: Install deps
+        run: npm i --no-audit --no-fund
 
       - name: Build
         run: npm run build
 
-      # Optional, but helpful if you keep BrowserRouter:
-      - name: Add SPA 404 fallback
+      # keep this even if you switch to HashRouter – harmless and helps BrowserRouter
+      - name: SPA fallback
         run: cp dist/index.html dist/404.html || true
 
-      - uses: actions/upload-pages-artifact@v3
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          # artifact path is relative to repo root
+          path: frontend/dist
 
   deploy:
     needs: build
