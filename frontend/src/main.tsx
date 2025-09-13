@@ -18,8 +18,6 @@ createRoot(document.getElementById('root')!).render(
         "bg-transparent shadow-none p-0 flex items-center mb-2"
       }
     />
-    <HashRouter>
-      <AppRoute />
-    </HashRouter>
+    <AppRoute />
   </StrictMode>
 )
