@@ -12,7 +12,6 @@ createRoot(document.getElementById('root')!).render(
       hideProgressBar
       closeButton={false}
       icon={false}
-      // This removes the default white card style
       toastClassName={() =>
         "bg-transparent shadow-none p-0 flex items-center mb-2"
       }
