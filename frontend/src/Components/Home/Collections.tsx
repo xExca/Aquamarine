@@ -24,8 +24,8 @@ const Collections = () => {
         </div>
 
         <div className="md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-4">
-          <CollectionsImage src="/assets/swimsuit/sunset_orchid_bikini_top_dark.jpg" />
-          <CollectionsImage src="/assets/swimsuit/sunset_orchid_bikini.jpg" />
+          <CollectionsImage src="@/assets/swimsuit/sunset_orchid_bikini_top_dark.jpg" />
+          <CollectionsImage src="@/assets/swimsuit/sunset_orchid_bikini.jpg" />
         </div>
       </div>
     </HomeFull>

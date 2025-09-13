@@ -14,7 +14,7 @@ const SizeChart = () => {
                 <div className="grid gap-4 sm:grid-cols-3 text-[color:var(--olive)]">
                   <div className="flex gap-3">
                     <img
-                      src="/assets/swimsuit/white_robe.jpg"
+                      src="@/assets/swimsuit/white_robe.jpg"
                       alt="Bust"
                       className="h-[60px] w-[60px] rounded-md object-cover shrink-0"
                     />
@@ -28,7 +28,7 @@ const SizeChart = () => {
 
                   <div className="flex gap-3">
                     <img
-                      src="/assets/swimsuit/white_robe.jpg"
+                      src="@/assets/swimsuit/white_robe.jpg"
                       alt="Waist"
                       className="h-[60px] w-[60px] rounded-md object-cover shrink-0"
                     />
@@ -42,7 +42,7 @@ const SizeChart = () => {
 
                   <div className="flex gap-3">
                     <img
-                      src="/assets/swimsuit/white_robe.jpg"
+                      src="@/assets/swimsuit/white_robe.jpg"
                       alt="Hips"
                       className="h-[60px] w-[60px] rounded-md object-cover shrink-0"
                     />

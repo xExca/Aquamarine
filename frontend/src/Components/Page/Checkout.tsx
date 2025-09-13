@@ -64,11 +64,11 @@ const Checkout = () => {
                   <div className="border-b border-neutral-300 flex items-center justify-between pb-2 mb-3">
                     <span>Secure Payments via PayMongo</span>
                     <div className="flex items-center">
-                      <img src="/assets/banks/mastercard.png" alt="mastercard" className="w-8 h-6 object-contain" />
-                      <img src="/assets/banks/visa.png" alt="visa" className="w-8 h-6 object-contain" />
-                      <img src="/assets/banks/amex.png" alt="amex" className="w-8 h-6 object-contain" />
-                      <img src="/assets/banks/paypal.png" alt="paypal" className="w-8 h-6 object-contain" />
-                      <img src="/assets/banks/gcash.png" alt="gcash" className="w-8 h-6 object-contain" />
+                      <img src="@/assets/banks/mastercard.png" alt="mastercard" className="w-8 h-6 object-contain" />
+                      <img src="@/assets/banks/visa.png" alt="visa" className="w-8 h-6 object-contain" />
+                      <img src="@/assets/banks/amex.png" alt="amex" className="w-8 h-6 object-contain" />
+                      <img src="@/assets/banks/paypal.png" alt="paypal" className="w-8 h-6 object-contain" />
+                      <img src="@/assets/banks/gcash.png" alt="gcash" className="w-8 h-6 object-contain" />
                     </div>
                   </div>
                   <div className="flex flex-col items-center justify-center">
@@ -103,7 +103,7 @@ const Checkout = () => {
           <aside className="bg-[#f2f3e7] px-5 py-12 md:px-8 lg:sticky lg:top-0 lg:h-screen w-full">
             <div className="mb-6 flex items-start gap-3">
               <img
-                src="/assets/swimsuit/sunset_orchid_bikini_top_dark.jpg"
+                src="@/assets/swimsuit/sunset_orchid_bikini_top_dark.jpg"
                 alt="Product"
                 className="h-16 w-12 rounded-md object-cover"
               />
