@@ -51,11 +51,11 @@ const Footer = () => {
           </div>
           <p className="font-bold text-base mt-6 mb-2">We Accept Payments from</p>
           <div className="flex space-x-4 items-center">
-            <img src="/assets/banks/mastercard.png" alt="mastercard" className="w-10 h-6 object-contain" />
-            <img src="/assets/banks/visa.png" alt="visa" className="w-10 h-6 object-contain" />
-            <img src="/assets/banks/amex.png" alt="amex" className="w-10 h-6 object-contain" />
-            <img src="/assets/banks/paypal.png" alt="paypal" className="w-10 h-6 object-contain" />
-            <img src="/assets/banks/gcash.png" alt="gcash" className="w-10 h-6 object-contain" />
+            <img src="assets/banks/mastercard.png" alt="mastercard" className="w-10 h-6 object-contain" />
+            <img src="assets/banks/visa.png" alt="visa" className="w-10 h-6 object-contain" />
+            <img src="assets/banks/amex.png" alt="amex" className="w-10 h-6 object-contain" />
+            <img src="assets/banks/paypal.png" alt="paypal" className="w-10 h-6 object-contain" />
+            <img src="assets/banks/gcash.png" alt="gcash" className="w-10 h-6 object-contain" />
           </div>
         </div>
       </div>

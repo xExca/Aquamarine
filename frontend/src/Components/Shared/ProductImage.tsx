@@ -1,5 +1,6 @@
 import { FaSearch } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import { withBase } from "./helper";
 
 type Props = {
   productId: number;
@@ -39,7 +40,7 @@ const ProductImage = ({
       onClick={handleClick}
     >
       <img
-        src={url}
+        src={withBase(url)}
         alt={productName}
         className="w-full h-auto object-cover transition duration-300 group-hover:scale-105 group-hover:blur-[1px]"
       />

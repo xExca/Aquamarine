@@ -2,11 +2,11 @@ import { useEffect, useRef, useState } from "react"
 import { GoPerson } from "react-icons/go"
 
 const images = [
-  "@/assets/hero/hero_image_1.jpg",
-  "@/assets/hero/hero_image_2.jpg",
-  "@/assets/hero/hero_image_3.jpg",
-  "@/assets/hero/hero_image_4.jpg",
-  "@/assets/hero/hero_image_5.jpg",
+  "assets/hero/hero_image_1.jpg",
+  "assets/hero/hero_image_2.jpg",
+  "assets/hero/hero_image_3.jpg",
+  "assets/hero/hero_image_4.jpg",
+  "assets/hero/hero_image_5.jpg",
 ]
 
 // dot sizing
