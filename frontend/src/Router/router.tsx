@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { HashRouter, Route, Routes } from "react-router-dom"
 import DefaultLayout from "../Components/Layout/DefaultLayout"
 import Home from "../Components/Page/Home"
 import ProductItem from "../Components/Product/ProductItem"
@@ -12,7 +12,7 @@ import UserManagement from "../Components/Page/UserManagement"
 
 const AppRoute: React.FC = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route element={<DefaultLayout />}>
           <Route path="/" element={<Home />} />
@@ -26,7 +26,7 @@ const AppRoute: React.FC = () => {
           <Route path="/checkout/:id" element={<Checkout />}/> 
         </Route>
       </Routes>
-    </BrowserRouter>  
+    </HashRouter>  
   )
 }
 
